@@ -61,12 +61,13 @@ Deploy to any servlet container (Tomcat, Jetty, WildFly, etc).
 
 ### Build WAR
 
-The servlet API jar is included in `lib/javax.servlet-api-4.0.1.jar`.
-
 ```bash
+# Download servlet API for compilation
+wget -q -O javax.servlet-api.jar https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar
+
 # Compile
 mkdir -p build/WEB-INF/classes
-javac -cp lib/javax.servlet-api-4.0.1.jar -d build/WEB-INF/classes \
+javac -cp javax.servlet-api.jar -d build/WEB-INF/classes \
     CattleFarm.java CowRecord.java CowChain.java ChainLink.java \
     CowRegistry.java ChainRegistry.java HashMapRegistry.java \
     MainServlet.java
