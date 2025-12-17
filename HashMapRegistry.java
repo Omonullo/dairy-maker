@@ -1,8 +1,13 @@
 import java.util.HashMap;
 
+
+
+/// I don't konw if using HashMap is ok
+/// We can switch to using this once it is approved
+/// it has better performance with O(1)
 public class HashMapRegistry implements CowRegistry {
 
-    private HashMap<Integer, CowRecord> cows;
+    private final HashMap<Integer, CowRecord> cows;
 
     public HashMapRegistry() {
         this.cows = new HashMap<>();
@@ -29,9 +34,5 @@ public class HashMapRegistry implements CowRegistry {
         }
         this.cows.remove(cowId);
         return true;
-    }
-
-    public int getSize() {
-        return this.cows.size();
     }
 }

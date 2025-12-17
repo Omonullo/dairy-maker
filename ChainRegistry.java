@@ -1,6 +1,9 @@
+/// Linked list implementation of CowRegistry
+/// Uses CowChain internally, no collections required
+/// Lookups are O(N), appends are O(1) with tail pointer
 public class ChainRegistry implements CowRegistry {
 
-    private CowChain chain;
+    private final CowChain chain;
 
     public ChainRegistry() {
         this.chain = new CowChain();
@@ -22,7 +25,4 @@ public class ChainRegistry implements CowRegistry {
         return this.chain.removeById(cowId);
     }
 
-    public int getSize() {
-        return this.chain.getSize();
-    }
 }

@@ -1,7 +1,10 @@
+/// Main farm class that manages cows in a tree structure
+/// Supports birth (adding calves) and death (removing cows, re-parenting children)
+/// Uses CowRegistry for lookups, defaults to ChainRegistry
 public class CattleFarm {
 
-    private CowRecord rootCow;
-    private CowRegistry registry;
+    private final CowRecord rootCow;
+    private final CowRegistry registry;
 
     public CattleFarm(int rootId, String rootName) {
         this(rootId, rootName, new ChainRegistry());
@@ -90,10 +93,10 @@ public class CattleFarm {
     }
 
     private void printCowRecursive(CowRecord cow, int depth) {
-        String indent = "";
+        StringBuilder indent = new StringBuilder();
         int i = 0;
         while (i < depth) {
-            indent = indent + "  ";
+            indent.append("  ");
             i = i + 1;
         }
 

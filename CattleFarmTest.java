@@ -1,3 +1,6 @@
+/// Test suite for CattleFarm
+/// Covers failure paths: missing parent, duplicate ID, removing root,
+/// removing parent with children, and input validation
 public class CattleFarmTest {
 
     private int passed;

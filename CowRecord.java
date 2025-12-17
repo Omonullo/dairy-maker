@@ -1,7 +1,10 @@
+/// Represents a single cow with ID, nickname, parent reference, and children
+/// Forms a tree structure where each cow knows its parent and children
+/// Validates that ID is non-negative and nickname is not null
 public class CowRecord {
 
-    private int cowId;
-    private String nickName;
+    private final int cowId;
+    private final String nickName;
     private CowRecord parent;
     private CowChain children;
 

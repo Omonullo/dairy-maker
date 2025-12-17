@@ -1,6 +1,8 @@
+/// Node in the CowChain linked list
+/// Holds a CowRecord and a reference to the next link
 public class ChainLink {
 
-    private CowRecord data;
+    private final CowRecord data;
     private ChainLink next;
 
     public ChainLink(CowRecord data) {

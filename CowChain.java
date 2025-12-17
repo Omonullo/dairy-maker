@@ -1,3 +1,6 @@
+/// Singly linked list of CowRecords
+/// Uses head and tail pointers for O(1) append
+/// Supports find, exists, and remove by cow ID
 public class CowChain {
 
     private ChainLink head;
